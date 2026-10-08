@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+.search-section {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#usernameInput {
+    flex: 1;
+    padding: 16px 18px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+#usernameInput:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.btn-search {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+    color: white;
+    border: none;
+    padding: 0 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.btn-search:hover {
+    transform: translateY(-1px);
+}
+
+.filters {
+    display: grid;
+    gap: 18px;
+}
+
+.filter-group {
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #dbeafe;
+    font-weight: 600;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    background: rgba(15, 23, 42, 0.7);
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.checkbox input {
+    accent-color: #38bdf8;
+}
+
+.loading-spinner {
+    text-align: center;
+    margin: 24px auto;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(148,163,184,0.3);
+    border-top: 4px solid #38bdf8;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.results-container {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.result-card {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    background: rgba(30, 41, 59, 0.7);
+    border-bottom: 1px solid rgba(148,163,184,0.15);
+}
+
+.platform-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.status.available {
+    background: rgba(34,197,94,0.15);
+    color: #86efac;
+}
+
+.status.taken {
+    background: rgba(239,68,68,0.15);
+    color: #fca5a5;
+}
+
+.status.unknown {
+    background: rgba(250,204,21,0.15);
+    color: #fde68a;
+}
+
+.result-body {
+    padding: 18px;
+}
+
+.user-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.meta {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #cbd5e1;
+}
+
+.note {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+@media (max-width: 720px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .btn-search {
+        padding: 14px 18px;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
