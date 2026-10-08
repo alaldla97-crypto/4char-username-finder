@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متتبع اليوزرنيمات - Username Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 متتبع اليوزرنيمات</h1>
+            <p>ابحث عن يوزرنيمات فارغة على جميع المنصات</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="usernameInput" 
+                        placeholder="أدخل اليوزرنيم المطلوب..."
+                        maxlength="20"
+                    >
+                    <button id="searchBtn" class="btn-search">بحث</button>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>طول اليوزرنيم:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" name="length" value="3" checked> ثلاثي
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="length" value="4" checked> رباعي
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="length" value="5" checked> خماسي
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>المنصات:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="tiktok" checked> TikTok
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="discord" checked> Discord
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="twitter" checked> Twitter (X)
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="instagram" checked> Instagram
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="twitch" checked> Twitch
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="snapchat" checked> Snapchat
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="telegram" checked> Telegram
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="platform" value="youtube" checked> YouTube
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>جاري البحث...</p>
+            </div>
+
+            <div id="resultsContainer" class="results-container">
+                <!-- النتائج ستظهر هنا -->
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 Username Finder | جميع الحقوق محفوظة</p>
+            <p class="note">ملاحظة: هذا التطبيق يستخدم APIs عامة للتحقق من توفر الأسماء</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
